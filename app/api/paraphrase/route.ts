@@ -1,10 +1,13 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
 
-const client = new Anthropic();
-
 export async function POST(req: NextRequest) {
   try {
+    if (!process.env.ANTHROPIC_API_KEY) {
+      return NextResponse.json({ error: "API 키가 설정되지 않았습니다. Vercel 환경변수를 확인하세요." }, { status: 500 });
+    }
+
+    const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
     const { sentence } = await req.json();
 
     if (!sentence || typeof sentence !== "string") {
@@ -54,7 +57,8 @@ export async function POST(req: NextRequest) {
     const result = JSON.parse(jsonMatch[0]);
     return NextResponse.json(result);
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ error: "서버 오류가 발생했습니다." }, { status: 500 });
+    const message = error instanceof Error ? error.message : String(error);
+    console.error("Paraphrase error:", message);
+    return NextResponse.json({ error: `서버 오류: ${message}` }, { status: 500 });
   }
 }
