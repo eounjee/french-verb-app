@@ -1,0 +1,50 @@
+{
+  "name": "FrenchVerb - 프랑스어 동사 연습",
+  "short_name": "FrenchVerb",
+  "description": "미니게임과 AI로 배우는 프랑스어 동사 변형",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f7ff",
+  "theme_color": "#6c47ff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%236c47ff' width='192' height='192'/><text x='96' y='120' font-size='100' font-weight='bold' text-anchor='middle' fill='white' font-family='system-ui'>🇫🇷</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%236c47ff' width='512' height='512'/><text x='256' y='350' font-size='280' font-weight='bold' text-anchor='middle' fill='white' font-family='system-ui'>🇫🇷</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%23f8f7ff' width='540' height='720'/><rect fill='%236c47ff' width='540' height='100'/><text x='270' y='60' font-size='48' font-weight='bold' text-anchor='middle' fill='white' font-family='system-ui'>FrenchVerb</text></svg>",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "shortcuts": [
+    {
+      "name": "변형 퀴즈",
+      "short_name": "퀴즈",
+      "description": "동사 변형 퀴즈 시작",
+      "url": "/?tab=quiz",
+      "icons": []
+    },
+    {
+      "name": "동사 폭탄",
+      "short_name": "폭탄",
+      "description": "스피드 게임 시작",
+      "url": "/?tab=bomb",
+      "icons": []
+    }
+  ]
+}
